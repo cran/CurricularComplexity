@@ -412,9 +412,9 @@ program author will sometimes list the lecture course as a corequisite
 for the laboratory course AND the laboratory course as a corequisite for
 the lecture course. This issue is referred to as courses being
 <em>mutually coreqed</em>. This configuration creates a cycle and
-thereby violatesthe acyclic criterion. This situation may not seem like
+thereby violates the acyclic criterion. This situation may not seem like
 a pertinent issue, but the presence of a cycle renders some functions
-usuable.</p>
+usable.</p>
 <p>Whenever you have courses that are mutually coreqed you <em>must</em>
 select one direction to define the corequisite relationship. In the case
 of laboratory courses, we recommend that the corequisite relationship be
@@ -884,7 +884,7 @@ their time to degree, <span class="math inline">\(k\)</span>.</p>
 <p>In fact, this factor can be calculated using the delay factor,
 <em>when ignoring corequisite relationships</em> (denoted by <span class="math inline">\(d&#39;(c_i)\)</span>) like so:</p>
 <p><span class="math inline">\(D(c_i) =
-\frac{1}{t_e-t(c_i)-d&#39;(c_i)+2}\)</span></p>
+\frac{1}{max(0,t_e-t(c_i)-d&#39;(c_i)+1)+1}\)</span></p>
 <p>If a course cannot be failed without extending the student’s time to
 degree, then the deferment factor will be 1. Smaller values of the
 deferment factor suggest more flexible courses. For example, course A is
@@ -916,7 +916,7 @@ However, what if you wanted to define what a bottleneck course means to
 you? This is accomplished using the <em>find_bottlenecks</em>
 function.</p>
 <p>The <em>find_bottlenecks</em> function has five inputs, one of which
-is optional. Given an inputed plan of study, the user specifies the
+is optional. Given an inputted plan of study, the user specifies the
 minimum number of prerequisites, the minimum number of courses the
 course serves as a prerequisite for (i.e., <em>“postreqs”</em>), and the
 minimum number of total connections. You can also specify whether you’d
@@ -925,16 +925,16 @@ default. Suggested values from the original paper (Wigdahl et al., 2013)
 would suggest typical usage is find_bottleneck(),3,3,5), which are
 provided by default.</p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a><span class="fu">find_bottlenecks</span>(example_plan_of_study,<span class="at">min_prereq =</span> <span class="dv">3</span>, <span class="at">min_postreq =</span> <span class="dv">3</span>, <span class="at">min_connections =</span> <span class="dv">5</span>,<span class="at">include_coreqs =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<pre><code>## + 0/9 vertices, named, from 7a35963:</code></pre>
+<pre><code>## + 0/9 vertices, named, from 966fb23:</code></pre>
 <p>Note the function also works without specifying the other
 arguments</p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" tabindex="-1"></a><span class="fu">find_bottlenecks</span>(example_plan_of_study)</span></code></pre></div>
-<pre><code>## + 0/9 vertices, named, from 7a35963:</code></pre>
+<pre><code>## + 0/9 vertices, named, from 966fb23:</code></pre>
 <p>Since the network is a small, we don’t have any bottlenecks as
 traditionally defined, so we can adjust our parameters however we’d
 like, for example…</p>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" tabindex="-1"></a><span class="fu">find_bottlenecks</span>(example_plan_of_study,<span class="at">min_prereq =</span> <span class="dv">2</span>, <span class="at">min_postreq =</span> <span class="dv">2</span>, <span class="at">min_connections =</span> <span class="dv">3</span>,<span class="at">include_coreqs =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<pre><code>## + 3/9 vertices, named, from 7a35963:
+<pre><code>## + 3/9 vertices, named, from 966fb23:
 ## [1] A D I</code></pre>
 <p>In this case, A, D, and I are sorted out as bottlenecks.</p>
 <p>Note that min_connections &gt;= min_prereq + min_postreq - 2. If this
@@ -943,7 +943,7 @@ minimum value of min_prereq + min_postreq - 2.</p>
 <div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" tabindex="-1"></a><span class="fu">find_bottlenecks</span>(example_plan_of_study,<span class="at">min_prereq =</span> <span class="dv">2</span>, <span class="at">min_postreq =</span> <span class="dv">2</span>, <span class="at">min_connections =</span> <span class="dv">1</span>,<span class="at">include_coreqs =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## Warning in find_bottlenecks(example_plan_of_study, min_prereq = 2, min_postreq
 ## = 2, : Your value for min_connections was too low. It has been adjusted to 2.</code></pre>
-<pre><code>## + 4/9 vertices, named, from 7a35963:
+<pre><code>## + 4/9 vertices, named, from 966fb23:
 ## [1] A D H I</code></pre>
 </div>
 </div>

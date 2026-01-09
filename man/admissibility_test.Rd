@@ -13,7 +13,7 @@ admissibility_test(plan_of_study)
 List of errors to correct for cycles, prereqs, and coreqs
 }
 \description{
-This function takes in a plan of study and a course, then checks for potential data entry issues.
+This function takes in a plan of study, then checks for potential data entry issues.
 It will detect issues in formatting with the csv (such as notes creating empty rows), if there
 are cycles in the network, and if pre- and corequisites are appropriately defined.
 }
