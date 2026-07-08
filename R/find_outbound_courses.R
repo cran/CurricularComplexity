@@ -4,12 +4,18 @@
 #' through its prerequisites (after the course).
 #' @param plan_of_study An igraph object created using the create_plan_of_study function
 #' @param course The course to find all relevant courses that directly or indirectly have it as a prereq
+#' @param include_coreqs Logical - Calculates the delay factor using corequisites, default value is TRUE
 #' @return An atomic vector of vertex ids for the course's following courses
 #' @export
 
 
-find_outbound_courses <- function(plan_of_study, course)
+find_outbound_courses <- function(plan_of_study, course, include_coreqs = TRUE)
 {
+  if (include_coreqs == FALSE)
+  {
+    plan_of_study <- delete_edges(plan_of_study, which(E(plan_of_study)$reqtype == "Co"))
+  }
+
   #The first statement looks ahead to see what courses are immediately after
   #the one we're interested in.
   next_courses <- unlist(adjacent_vertices(plan_of_study, course, mode = c("out")))

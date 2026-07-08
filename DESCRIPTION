@@ -1,7 +1,7 @@
 Package: CurricularComplexity
 Type: Package
 Title: Toolkit for Analyzing Curricular Complexity
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: c(person(given = "David", family = "Reeping", role = c("aut","cre"), email = "reepindp@ucmail.uc.edu"))
 Author: David Reeping [aut, cre]
 Maintainer: David Reeping <reepindp@ucmail.uc.edu>
@@ -13,6 +13,6 @@ Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 RoxygenNote: 7.3.3
 NeedsCompilation: no
-Packaged: 2026-06-16 14:43:10 UTC; reepi
+Packaged: 2026-07-08 19:08:46 UTC; reepi
 Repository: CRAN
-Date/Publication: 2026-06-16 16:00:02 UTC
+Date/Publication: 2026-07-08 19:30:02 UTC

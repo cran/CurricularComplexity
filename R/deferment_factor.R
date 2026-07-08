@@ -7,16 +7,14 @@
 #' @param plan_of_study igraph object - An igraph object created using the create_plan_of_study function
 #' @param course Numeric (vertex id) or String - The course to calculate the deferment factor of
 #' @param expected_time_to_degree Numeric - The term where students are expected to finish (often 8)
+#' @param outbound_only logical - TRUE (by default) if the calculation should only include courses after the course (postreqs)
 #' @return Numeric - the deferment factor
 #' @export
 
 
-deferment_factor <- function(plan_of_study, course, expected_time_to_degree)
+deferment_factor <- function(plan_of_study, course, expected_time_to_degree,outbound_only=TRUE)
 {
-  course_term <- V(plan_of_study)[course]$term
-  course_delay_factor <- delay_factor(plan_of_study,course,include_coreqs = FALSE)
-  terms_before_extension <- expected_time_to_degree - course_term - (course_delay_factor - course_term + 1) + 1
-  terms_before_extension <- max(0,terms_before_extension)
+  terms_before_extension <- find_number_of_free_terms(plan_of_study, course, expected_time_to_degree,outbound_only)
   deferment_factor_calculation <- 1/(1+terms_before_extension)
   return(deferment_factor_calculation)
 }

@@ -4,12 +4,14 @@
 \alias{find_outbound_courses}
 \title{Find all possible courses that depend on a particular course}
 \usage{
-find_outbound_courses(plan_of_study, course)
+find_outbound_courses(plan_of_study, course, include_coreqs = TRUE)
 }
 \arguments{
 \item{plan_of_study}{An igraph object created using the create_plan_of_study function}
 
 \item{course}{The course to find all relevant courses that directly or indirectly have it as a prereq}
+
+\item{include_coreqs}{Logical - Calculates the delay factor using corequisites, default value is TRUE}
 }
 \value{
 An atomic vector of vertex ids for the course's following courses

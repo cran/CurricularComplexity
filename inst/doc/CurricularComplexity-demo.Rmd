@@ -422,7 +422,7 @@ The *deferment factor* is one of the few metrics available that uses the term in
 
 $D(c_i) = \frac{1}{k + 1}$
 
-In fact, this factor can be calculated using the delay factor, *when ignoring corequisite relationships* (denoted by $d'(c_i)$) like so:
+In fact, for prerequisite chains with no gaps in terms, this factor can be calculated using the delay factor, *when ignoring corequisite relationships* (denoted by $d'(c_i)$) like so:
 
 $D(c_i) = \frac{1}{max(0,t_e-t(c_i)-(d'(c_i)-t(c_i)+1)+1)+1}$
 

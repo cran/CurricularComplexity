@@ -4,7 +4,12 @@
 \alias{deferment_factor}
 \title{Calculates the deferment factor of a course}
 \usage{
-deferment_factor(plan_of_study, course, expected_time_to_degree)
+deferment_factor(
+  plan_of_study,
+  course,
+  expected_time_to_degree,
+  outbound_only = TRUE
+)
 }
 \arguments{
 \item{plan_of_study}{igraph object - An igraph object created using the create_plan_of_study function}
@@ -12,6 +17,8 @@ deferment_factor(plan_of_study, course, expected_time_to_degree)
 \item{course}{Numeric (vertex id) or String - The course to calculate the deferment factor of}
 
 \item{expected_time_to_degree}{Numeric - The term where students are expected to finish (often 8)}
+
+\item{outbound_only}{logical - TRUE (by default) if the calculation should only include courses after the course (postreqs)}
 }
 \value{
 Numeric - the deferment factor

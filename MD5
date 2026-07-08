@@ -1,4 +1,4 @@
-a537671633ffa8af5c77e60f4093e9b1 *DESCRIPTION
+7ccbcf2764fc2f7f961db9b7828ff4b0 *DESCRIPTION
 a6e8318364b12b4c3f24abc3555715af *LICENSE
 ebec13ad98f343a7e2203398a34a17e6 *NAMESPACE
 a7bcb858eced891eec0a2866437b4124 *NEWS.md
@@ -9,12 +9,13 @@ c34fa9d8972e2b68b926d80cd8dcd795 *R/blocking_factor.R
 9615c14c7a43733c455b294f358520f5 *R/create_plan_of_study.R
 574e06f67a1ee1eb3ef0d26c53635abe *R/cruciality.R
 f8c78802eb5f34b69c90b9521a44fc89 *R/curriculum_rigidity.R
-9cbb193a3ffd53ac781f6c27f7327fc3 *R/deferment_factor.R
+bbb5c94388c0d3b5a7e0ef27898100b2 *R/deferment_factor.R
 a723bf6424fc924e890b901201627d3d *R/delay_factor.R
 d2904f42c42082d8b6d1590ca639c8f6 *R/explained_complexity.R
 1fc24fc1ced0d9a4016e6deb193a06e0 *R/find_bottlenecks.R
-a268b973b21e46341382dd39f0966154 *R/find_inbound_courses.R
-f359fe9ae87c65644886be8a9bc87f3f *R/find_outbound_courses.R
+2c0a3d8ba7901625bd6b78b067f8edec *R/find_inbound_courses.R
+2f6a62985868525fdec31b892b58c705 *R/find_number_of_free_terms.R
+97d3289e271ae04fd2f19a2063c3dcaa *R/find_outbound_courses.R
 07928e59d87eeb62e18f615334d33f6c *R/inflexibility_factor.R
 964d76b706ba417ce430319bfb35deb0 *R/plot_plan_of_study.R
 ade2e18974457465807e6e9aa31b4aa3 *R/reachability_factor.R
@@ -26,8 +27,8 @@ b5545226f37347055e48e342ff119de1 *R/simplify_requisites.R
 d55b8e35e4bd132a0d4578ddb0a8d900 *R/transfer_excess_courses.R
 de1b662672747da696a178f92174caa9 *build/vignette.rds
 47016d21bfd4bdf47770496852957453 *inst/doc/CurricularComplexity-demo.R
-d8e5710c62076240bb56d659bbb71cc1 *inst/doc/CurricularComplexity-demo.Rmd
-6a1536c7406ca214706873e6e2df232a *inst/doc/CurricularComplexity-demo.html
+89560fbf5be8b68f6807cbce84b3b1d3 *inst/doc/CurricularComplexity-demo.Rmd
+636210f716a0c5e8bbe85dc881f4d87e *inst/doc/CurricularComplexity-demo.html
 b8fe25b285fb10b4bf2669ec9e47522a *man/admissibility_test.Rd
 21a4dbbbbb32bb2173719f47cc80ea11 *man/average_sequencing.Rd
 b3ffee351e26f41c39188d23d75c6a36 *man/blocking_factor.Rd
@@ -35,12 +36,13 @@ eba609a5f2e32aab32bb0848fd55b75f *man/core_collapse.Rd
 74df927ced3f20c20026693b7aa50569 *man/create_plan_of_study.Rd
 69264a1c79c7f1aa870bc7d6a6a5d986 *man/cruciality.Rd
 74e2e9c814ca65ca2c64d1f877c83e76 *man/curriculum_rigidity.Rd
-bcf69c9f724932b0d9f130853dea8bc1 *man/deferment_factor.Rd
+6d9dcb3c7d885baf1860a09c284141b5 *man/deferment_factor.Rd
 8a25821b01e73acbd3789cdd1f3bd9e3 *man/delay_factor.Rd
 89aab3852fb9faf3aed0808c9a096601 *man/explained_complexity.Rd
 f752141fba29a4bdb549b98e059b52b6 *man/find_bottlenecks.Rd
-bb954879992aab956355c679b28b6477 *man/find_inbound_courses.Rd
-11629e15f20d1e7b02c42c6e0440646c *man/find_outbound_courses.Rd
+09c34f165500b5edaf9b990166054406 *man/find_inbound_courses.Rd
+f47d92ead688e857d672aea6cba36147 *man/find_number_of_free_terms.Rd
+2841eff8a4b745fb0dd70abee9e1cb86 *man/find_outbound_courses.Rd
 0f86e478295dfa4caeddc7ac10fad0a7 *man/inflexibility_factor.Rd
 f2b5f0b47c69e63128846f8acdb66577 *man/plot_plan_of_study.Rd
 d14b7daa3c451635c102f112bd8580b9 *man/reachability_factor.Rd
@@ -50,4 +52,4 @@ baf819be295f7f77667abdfa87d76f00 *man/student_mobility_turbulence.Rd
 fedd2c7de8aeb69c1a589c5912f9a3fd *man/subcomplexity_graph.Rd
 d9d2ace23d8092e576b7415ba2450532 *man/transfer_delay_factor.Rd
 2971080a08bdb4e2dd877a6ddd40a326 *man/transfer_excess_courses.Rd
-d8e5710c62076240bb56d659bbb71cc1 *vignettes/CurricularComplexity-demo.Rmd
+89560fbf5be8b68f6807cbce84b3b1d3 *vignettes/CurricularComplexity-demo.Rmd
